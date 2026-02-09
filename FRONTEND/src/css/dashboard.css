@@ -1,0 +1,276 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6fb;
+}
+
+/* NAVBAR */
+.navbar {
+  height: 64px;
+  background: #6c63ff;
+  color: white;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  background: white;
+  color: #6c63ff;
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.nav-item.active {
+  background: white;
+  color: #6c63ff;
+}
+
+.login-btn {
+  background: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+/* MAIN */
+.main-content {
+  min-height: calc(100vh - 64px);
+}
+
+/* DASHBOARD */
+.dashboard {
+  display: flex;
+}
+
+.sidebar {
+  width: 280px;
+  background: #ecebff;
+  padding: 20px;
+}
+
+.events-grid {
+  flex: 1;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* EVENT CARD */
+.event-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.event-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.event-info {
+  padding: 15px;
+}
+
+/* PAGES */
+.page-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+}
+
+.upcoming-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px,1fr));
+  gap: 20px;
+}
+
+.upcoming-card,
+.my-event-card,
+.admin-card {
+  background: white;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* FORM */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* BUTTONS */
+.btn.primary {
+  background: #6c63ff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.btn.secondary {
+  border: 1px solid #6c63ff;
+  background: transparent;
+  color: #6c63ff;
+  border-radius: 20px;
+  padding: 8px 16px;
+}
+
+
+/* SIDEBAR */
+.sidebar {
+  width: 300px;
+  background: #f1f0ff;
+  padding: 20px;
+}
+
+/* CALENDAR CARD */
+.calendar {
+  background: white;
+  padding: 14px;
+  border-radius: 16px;
+  margin-top: 16px;
+  width: 100%;
+  max-width: 260px;   /* 🔥 KEY FIX */
+}
+
+/* HEADER */
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.calendar-header button {
+  border: none;
+  background: #f0f0f0;
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.calendar-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* WEEKDAYS */
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+/* GRID */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+/* EMPTY CELLS */
+.empty-cell {
+  height: 30px;
+}
+
+/* DATE CELLS */
+.date-cell {
+  width: 30px;
+  height: 30px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 13px;
+  position: relative;
+}
+
+.date-cell:hover {
+  background: #e6e4ff;
+}
+
+.active-date {
+  background: #6c63ff;
+  color: white;
+  font-weight: 600;
+}
+
+/* EVENT DOT */
+.dot {
+  width: 5px;
+  height: 5px;
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 3px;
+}
+
+/* MODAL */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  padding: 20px;
+  width: 360px;
+  border-radius: 16px;
+}
+
+.modal h3 {
+  margin-top: 0;
+}
+
+.modal input,
+.modal textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
